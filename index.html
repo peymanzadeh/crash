@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crash Game</title>
+    <style>
+        body {
+            font-family: "Arial";
+        }
+        #canvas {
+            border:1px solid #000000;
+        }
+        #canvas-wrapper {
+            position: relative;
+            width: 600px;
+            height: 400px;
+        }
+        
+
+        #multiplier {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2em;
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+        }
+
+        #winorlose {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        /** add playerStopMultiplier just below multiplier */
+        #playerStopMultiplier {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2em;
+            color: rgb(0, 126, 34);
+            font-weight: bold;
+        }
+
+        /** add stillgoing just outside the top right corner of the canvas */
+        #stillgoing {
+            position: absolute;
+            top: 4%;
+            left: 86%;
+            font-size: 0.8em;
+            color: rgb(0, 0, 0);
+            width: 100px;
+        }
+
+        /** styline button to look slick **/
+        #startStopButton {
+            font-size: 1.2em;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            background-color: rgb(0, 0, 0);
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="canvas-wrapper">
+        <canvas id="canvas" width="600" height="400"></canvas>
+        <div id="multiplier">X1.00</div>
+        <div id="playerStopMultiplier"></div>
+        <div id="winorlose"></div>
+        <div id="stillgoing"></div>
+    </div>
+    <button id="startStopButton">START</button>
+    <script src="crash.js"></script>
+</body>
+</html>
+
